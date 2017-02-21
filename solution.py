@@ -26,6 +26,7 @@ def naked_twins(values):
         # find boxes with two vals in each unit
         doubles = [box for box in unit if len(values[box])==2]
         # find twins, make sure they are not the same box
+        # TODO: can i update this to not have lists of tuples. can it be done with one tupel?
         twins = [(box1, box2) for box1 in doubles for box2 in doubles if(values[box1]==values[box2] and box1!=box2)]
         for twin in twins:
             for box in unit:
